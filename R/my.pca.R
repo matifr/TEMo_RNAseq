@@ -5,7 +5,7 @@
 ## Output: PCA plot
 ## Date: 28-9-2018
 ##------------------------------------------
-my.pca = function(mat, dge, option = "condition"){
+my.pca <- function(mat, dge, option = "condition"){
   
   ##------------------------------------------
   # Load libraries
