@@ -6,7 +6,7 @@
 ## Date: 28-9-2018
 ##------------------------------------------
 
-Import.normalise.data = function(){
+Import.normalise.data <- function(){
  
   ##------------------------------------------
   # Source files
