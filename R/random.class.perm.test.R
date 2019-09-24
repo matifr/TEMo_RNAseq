@@ -6,7 +6,7 @@
 ## Date: 5-11-2018
 ##------------------------------------------
 
-random.class.perm.test = function(data_fr, variables, iter = 100) {
+random.class.perm.test <- function(data_fr, variables, iter = 100) {
   
   ##------------------------------------------
   # Source files
