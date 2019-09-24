@@ -6,7 +6,7 @@
 ## Date: 1-10-2018
 ##------------------------------------------
 
-corr.filtering = function(trainData){
+corr.filtering <- function(trainData){
   ##------------------------------------------
   # Load libraries
   ##------------------------------------------
