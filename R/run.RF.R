@@ -1,12 +1,12 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Trains  random forest model
+## Purpose of script: Trains random forest model
 ## Input: Training dataset (TrainData), 
 ## Output: The trained random forest model
 ## Date: 5-11-2018
 ##------------------------------------------
 
-run.RF = function(trainData){
+run.RF <- function(trainData){
   
   ##------------------------------------------
   # Load libraries
