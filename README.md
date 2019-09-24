@@ -9,5 +9,7 @@ Consequently, this study investigated the transcriptomes of circulating monocyte
 
 ### Project Aims 
 a)	To compare the transcriptional profiles of circulating monocytes coming from breast and endometrial cancer patients to healthy individuals as well as between cancer types.
+
 b)	To identify a diagnostic signature and develop a classification model for stratification of cancer patients.
+
 c)	To validate the robustness of the diagnostic signature on independent patient cohorts as well as datasets of monocytes from different cancer types.
