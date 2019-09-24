@@ -6,7 +6,7 @@
 ## Date: 5-10-2018
 ##------------------------------------------
 
-plot.ROC = function(trainModel, testModel, testDataClass, Title = "ROC Curve"){
+plot.ROC <- function(trainModel, testModel, testDataClass, Title = "ROC Curve"){
   ##------------------------------------------
   # Load libraries
   ##------------------------------------------
