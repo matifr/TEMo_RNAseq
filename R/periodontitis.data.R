@@ -18,9 +18,8 @@ periodontitis.data = function(predictors){
   ##------------------------------------------
   source(file = "Functions/remove.dots.R")
   
-  sampleFiles = list.files(path = "Input/public_periodontitis/", pattern = "*.count")
-  period_sampleConditions = c(rep("Cancer",5), rep("Normal",5))
-  d = readDGE(sampleFiles, path = "Input/public_periodontitis/", columns=c(1,2), period_sampleConditions)
+  #### Load the DGE object containing the periodontitis dataset
+  load(file = "Data/periodontitis_dge_obj.Rdata")
   
   d <- calcNormFactors(d, method = "upperquartile") 
   nrm_data = cpm(d,log=TRUE,prior.count=1)
