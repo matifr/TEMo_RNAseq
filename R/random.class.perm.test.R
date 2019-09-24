@@ -1,29 +1,40 @@
-# Function for permutation testing on the class labels during training of the Random forest
-# param: data_fr = the dataset to work with, variables = the variables to use for training the random classifier
-random.class.perm.test = function(data_fr, variables, iter = 100){
+##------------------------------------------
+## Author: Matina Fragkogianni
+## Purpose of script: Performs permutation testing on the class labels during training of the Random forest
+## Input: data frame containing gene expression values and sample class information (data_fr), the variables to use for training the random classifier (variables), number of permutations (iter)
+## Output: List of model accuracies during training and testing
+## Date: 5-11-2018
+##------------------------------------------
 
-  TrainAccuracy = c()
-  TestAccuracy =c()
+random.class.perm.test = function(data_fr, variables, iter = 100) {
+  
+  ##------------------------------------------
+  # Source files
+  ##------------------------------------------
   source(file = "Classification_Analysis/tidy_code/run.RF.R")
-  for(i in 1:iter){
-    
-    data_rep = data_fr[,rf.corr.rfe$optVariables]
+  
+  TrainAccuracy = c()
+  TestAccuracy = c()
+  for (i in 1:iter) {
+    data_rep = data_fr[, rf.corr.rfe$optVariables]
     data_rep$class = data_fr$class
     
     set.seed(i)
     # Step 1: Get row numbers for the training data
-    trainRowNumbers <- createDataPartition(data_rep$class, p = 0.7, list=FALSE)
+    trainRowNumbers <-
+      createDataPartition(data_rep$class, p = 0.7, list = FALSE)
     
     # Step 2: Create the training  dataset
-    trainData <- data_rep[trainRowNumbers,]
+    trainData <- data_rep[trainRowNumbers, ]
     dim(trainData)
     
     # shuffle class labels and assign them to the trainData matrix
-    random_class <- sample(trainData$class, length(trainData$class), FALSE)
+    random_class <-
+      sample(trainData$class, length(trainData$class), FALSE)
     trainData$class = random_class
     
     # Step 3: Create the test dataset
-    testData <- data_rep[-trainRowNumbers,]
+    testData <- data_rep[-trainRowNumbers, ]
     dim(testData)
     
     cat("Running RF-RFE")
@@ -42,9 +53,4 @@ random.class.perm.test = function(data_fr, variables, iter = 100){
   }
   
   return(list("TrainAccuracy" = TrainAccuracy, "TestAccuracy" = TestAccuracy))
-
 }
-
-
-
-
