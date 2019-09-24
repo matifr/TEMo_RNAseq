@@ -6,7 +6,7 @@
 ## Date: 28-9-2018
 ##------------------------------------------
 
-ensembl.to.GS = function(subset){
+ensembl.to.GS <- function(subset){
 
   ##------------------------------------------
   # Load libraries
