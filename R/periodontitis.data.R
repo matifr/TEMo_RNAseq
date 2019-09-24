@@ -6,7 +6,7 @@
 ## Date: 1-10-2018
 ##------------------------------------------
   
-periodontitis.data = function(predictors){
+periodontitis.data <- function(predictors){
   ##------------------------------------------
   # Load libraries
   ##------------------------------------------
