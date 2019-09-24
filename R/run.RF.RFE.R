@@ -6,7 +6,7 @@
 ## Date: 28-9-2018
 ##------------------------------------------
 
-run.RF.RFE = function(trainData, subsets = c(2:30)){
+run.RF.RFE <- function(trainData, subsets = c(2:30)){
   ##------------------------------------------
   # Load libraries
   ##------------------------------------------
