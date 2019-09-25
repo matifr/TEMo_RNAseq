@@ -1,5 +1,9 @@
-## Transcriptomic analysis of human monocytes for breast cancer diagnosis
+# Transcriptomic analysis of human monocytes for breast cancer diagnosis
 
+## Table of contents
+* [Background and motivation ](#Background-and-motivation )
+* [Project Aims ](#Project-Aims )
+* [Setup](#setup)
 
 ### Background and motivation 
 
