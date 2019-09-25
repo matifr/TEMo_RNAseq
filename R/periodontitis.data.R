@@ -24,16 +24,16 @@ periodontitis.data <- function(predictors){
   load(file = "Data/periodontitis_dge_obj.Rdata")
   
   d <- calcNormFactors(d, method = "upperquartile") 
-  nrmData = cpm(d,log=TRUE,prior.count=1)
+  nrmData <- cpm(d,log=TRUE,prior.count=1)
   
   
-  rownames(nrmData)=remove.dots(nrmData)
+  rownames(nrmData) <- remove.dots(nrmData)
   cat(paste("Number of predictors in the data: ",sum(rownames(nrmData) %in% predictors)))
   
   #### Create data frame for the data
-  periodTestData = t(nrmData)
-  periodTestDataClass = periodSampleConditions
-  periodTestData = data.frame(periodTestData, class = periodTestDataClass)
+  periodTestData <- t(nrmData)
+  periodTestDataClass <- periodSampleConditions
+  periodTestData <- data.frame(periodTestData, class = periodTestDataClass)
   
   return(periodTestData)
 }
