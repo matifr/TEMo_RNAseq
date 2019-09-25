@@ -1,9 +1,12 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Translate Ensembl IDs to Gene symbols using the biomart database 
-## Input: String vector (subset)
-## Output: Prints ensembl IDs and corresponding gene symbols on the stdout
 ## Date: 28-9-2018
+##
+## A function to translate Ensembl IDs to Gene symbols using the biomart database 
+##
+## @param subset is a string vector 
+## @return shows in stdout the ensembl IDs and their corresponding gene symbols
+##
 ##------------------------------------------
 
 ensembl.to.GS <- function(subset){
