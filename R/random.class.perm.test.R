@@ -1,9 +1,13 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Performs permutation testing on the class labels during training of the Random forest
-## Input: data frame containing gene expression values and sample class information (data_fr), the variables to use for training the random classifier (variables), number of permutations (iter)
-## Output: List of model accuracies during training and testing
 ## Date: 5-11-2018
+##
+## A function that performs permutation testing on the class labels during training of the Random forest
+## @param data_fr A data frame containing gene expression values and sample class information
+## @param  variables A string vector of features
+## @param  iter number of permutations
+## @return A list of model accuracies during training and testing
+## 
 ##------------------------------------------
 
 random.class.perm.test <- function(data_fr, variables, iter = 100) {
@@ -16,7 +20,7 @@ random.class.perm.test <- function(data_fr, variables, iter = 100) {
   TrainAccuracy = c()
   TestAccuracy = c()
   for (i in 1:iter) {
-    data_rep = data_fr[, rf.corr.rfe$optVariables]
+    data_rep = data_fr[, variables]
     data_rep$class = data_fr$class
     
     set.seed(i)
