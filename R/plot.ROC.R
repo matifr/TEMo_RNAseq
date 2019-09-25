@@ -16,15 +16,15 @@ plot.ROC <- function(trainModel, testModel, testDataClass, Title = "ROC Curve"){
   ##------------------------------------------
   library(ROCR)
 
-  pred = prediction(predictions = trainModel$pred$Normal, labels = trainModel$pred$obs, label.ordering = rev(levels(c("Cancer", "Normal"))))
+  pred <- prediction(predictions = trainModel$pred$Normal, labels = trainModel$pred$obs, label.ordering = rev(levels(c("Cancer", "Normal"))))
   perf <- performance(pred, "tpr", "fpr")
-  plot(perf, main=Title, col ="#1B9E77",lwd=2, cex.axis=10)
+  plot(perf, main = Title, col = "#1B9E77",lwd = 2, cex.axis = 10)
   abline(0, 1, col="black", lty=2)
   
   auc <- performance(pred,"auc")
   auc <- unlist(slot(auc, "y.values"))
   
-  auc<-round(auc, digits = 2) * 100
+  auc <- round(auc, digits = 2) * 100
   auct <- paste(c("Training (AUC: "),auc,c("%)"))
   
   pred <- prediction(predictions = testModel$Normal, labels = testDataClass, label.ordering = rev(levels(c("Cancer", "Normal"))))
@@ -34,8 +34,8 @@ plot.ROC <- function(trainModel, testModel, testDataClass, Title = "ROC Curve"){
   auc1 <- performance(pred,"auc")
   auc1 <- unlist(slot(auc1, "y.values"))
   
-  auc1<-round(auc1, digits = 2) * 100
+  auc1 <- round(auc1, digits = 2) * 100
   auct1 <- paste(c("Testing (AUC: "),auc1,c("%)"))
   
-  legend(0.5,0.3, legend=c(c(auct, auct1)),cex=1,text.col=c('#1B9E77', "#7570B3"), col=c("#1B9E77", "#7570B3") ,bty = "n", text.font = 3)
+  legend(0.5,0.3, legend = c(c(auct, auct1)),cex = 1,text.col = c('#1B9E77', "#7570B3"), col = c("#1B9E77", "#7570B3") ,bty = "n", text.font = 3)
 }
