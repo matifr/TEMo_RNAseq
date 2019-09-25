@@ -4,7 +4,7 @@
 * [Background and motivation ](#Background-and-motivation )
 * [Project Aims ](#Project-Aims )
 * [How to run the scripts](#setup)
-** [Differential expression analysiss](#Differential-expression-analysiss)
+	* [Differential expression analysis](#Differential-expression-analysiss)
 
 ### Background and motivation 
 
