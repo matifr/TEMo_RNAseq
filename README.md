@@ -3,7 +3,8 @@
 ## Table of contents
 * [Background and motivation ](#Background-and-motivation )
 * [Project Aims ](#Project-Aims )
-* [Setup](#setup)
+* [How to run the scripts](#setup)
+** [Differential expression analysiss](#Differential-expression-analysiss)
 
 ### Background and motivation 
 
