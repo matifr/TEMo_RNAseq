@@ -1,9 +1,13 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Dimensionality reduction based on feature correlation on the training data
-## Input: Training data matrix (trainData)
-## Output: List containing the reduced gene expression matrix and dataFrame containing sample class information
-## Date: 1-10-2018
+## Date: 28-9-2018
+##
+## A function that performs dimensionality reduction based on 
+## feature correlation on the training data
+##
+## @param trainData is a dataframe of gene expression used for training
+## @returm A list containing the reduced gene expression matrix and dataFrame containing sample class information
+##
 ##------------------------------------------
 
 corr.filtering <- function(trainData){
