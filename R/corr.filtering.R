@@ -17,21 +17,20 @@ corr.filtering <- function(trainData){
   require(feseR)
   require(dplyr)
   
-  
-  tData = trainData %>% dplyr::select(-c("class"))
-  cT =  trainData %>% select(c("class"))
-  cT$class= ifelse(cT$class == "Normal","0","1")
-  tData = as.matrix(tData)
-  cT$class = as.numeric(cT$class)
-  cT = as.matrix(cT$class)
-  reduced.tData = filter.corr(features = tData, class = cT, mincorr = 0.4)
+  tData <- trainData %>% dplyr::select(-c("class"))
+  cT <-  trainData %>% select(c("class"))
+  cT$class <- ifelse(cT$class == "Normal","0","1")
+  tData <- as.matrix(tData)
+  cT$class <- as.numeric(cT$class)
+  cT <- as.matrix(cT$class)
+  reduced.tData <- filter.corr(features = tData, class = cT, mincorr = 0.4)
   dim(reduced.tData)
   
   
-  cT = as.data.frame(cT)
-  names(cT) = "class"
-  cT$class = ifelse(cT$class == "0","Normal","Cancer")
-  cT$class = as.factor(cT$class)
+  cT <- as.data.frame(cT)
+  names(cT) <- "class"
+  cT$class <- ifelse(cT$class == "0","Normal","Cancer")
+  cT$class <- as.factor(cT$class)
   
   return(list("reduced.tData" = reduced.tData, "class" = cT))
   
