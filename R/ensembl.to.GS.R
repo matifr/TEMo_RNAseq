@@ -16,8 +16,8 @@ ensembl.to.GS <- function(subset){
   ##------------------------------------------
   require(biomaRt)
   
-  ensembl = useMart(biomart = "ENSEMBL_MART_ENSEMBL",dataset="hsapiens_gene_ensembl", host = "grch37.ensembl.org")
-  all_genes= getBM(filters = "ensembl_gene_id", attributes= c("external_gene_name","ensembl_gene_id", "description"),
+  ensembl <- useMart(biomart = "ENSEMBL_MART_ENSEMBL",dataset = "hsapiens_gene_ensembl", host = "grch37.ensembl.org")
+  all_genes <- getBM(filters = "ensembl_gene_id", attributes = c("external_gene_name","ensembl_gene_id", "description"),
                    values = subset, mart = ensembl)
   
   print(all_genes)
