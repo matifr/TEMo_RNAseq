@@ -23,6 +23,8 @@ The advent of high-throughput microarray technologies has resulted in an increas
 
 #### Differential expression analysis
 
-` this is a code block`
+` this is a code block
+dlist <- Import.normalise.data()
+`
 
 #### Classification
