@@ -1,9 +1,12 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Run batch effect correction
-## Input: DGE object (dge), Normalized matrix of gene expression (mat)
-## Output: Returns the batch effect corrected matrix of gene expression
 ## Date: 28-9-2018
+##
+## A function that runs batch effect correction on a gene expression matrix
+## @param dge a DGE object
+## @param mat a log2cpm normalised gene expression matrix o
+## @return: Returns the batch effect corrected matrix of gene expression
+## 
 ##------------------------------------------
 
 run.ComBat <- function(dge,mat){
