@@ -1,9 +1,11 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Import and processing of the public dataset of isolated monocytes from periodontitis samples
-## Input: Gene signature selected during model training (predictors)
-## Output: Dataframe containing gene expression and sample class information
 ## Date: 1-10-2018
+##
+## A function to import and process a public dataset of isolated monocytes from periodontitis samples
+## @param predictors A string vector of predictor features
+## @return A dataframe containing gene expression and sample class information
+## 
 ##------------------------------------------
   
 periodontitis.data <- function(predictors){
