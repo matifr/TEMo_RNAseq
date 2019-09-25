@@ -1,7 +1,9 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Use monocyte gene expression to classify patient disease state (Cancer/non-Cancer)
 ## Date: 7-11-2018
+##
+## This is the main script that performs model training and classification using monocyte gene expression
+## 
 ##------------------------------------------
 
 ##------------------------------------------
