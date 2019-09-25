@@ -17,4 +17,6 @@ b)	To identify a diagnostic signature and develop a classification model for str
 
 c)	To validate the robustness of the diagnostic signature on independent patient cohorts as well as datasets of monocytes from different cancer types.
 
-### Setup
+### How to run the scripts
+
+#### Differential expression analysiss
