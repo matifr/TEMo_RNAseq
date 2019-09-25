@@ -1,9 +1,10 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Import gene expression data and create a normalise matrix 
-## Input: 
-## Output: Normalised expression matrix
 ## Date: 28-9-2018
+## This function imports the gene expression data and create a normalized matrix of gene expression for downstream analysis
+## 
+## @return A matrix containing the normalised expression values
+## 
 ##------------------------------------------
 
 Import.normalise.data <- function(){
