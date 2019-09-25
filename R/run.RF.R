@@ -32,7 +32,7 @@ run.RF <- function(trainData){
                     trControl = ctrl, 
                     importance = TRUE,
                     preProc=c("center", "scale"),
-                    tuneGrid = expand.grid(.mtry=c(4))
+                    tuneGrid = expand.grid(.mtry = c(4))
                     )
 
   return(model_rf)
