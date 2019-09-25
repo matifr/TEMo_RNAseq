@@ -1,7 +1,10 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Differential expression analysis of monocytes from human breast and endometrial cancer samples
 ## Date: 7-9-2018
+##
+## The main script that performs differential expression analysis (DEA) of 
+## monocytes from human breast and endometrial cancer samples
+## 
 ##------------------------------------------
 
 ##------------------------------------------
