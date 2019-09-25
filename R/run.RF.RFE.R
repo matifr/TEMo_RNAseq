@@ -1,9 +1,12 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Running Recursive feature elimination (RFE) with a Random forest (RF) model on the training dataset
-## Input: Training data frame (trainData), number of features to be tested (subsets)
-## Output: Trained classification model
 ## Date: 28-9-2018
+##
+## A function to run a Recursive feature elimination (RFE) with Random forest (RF) model
+## @param trainData Training data frame,
+## @param  subsets a vector of number of features to be tested
+## @return the trained classification model
+## 
 ##------------------------------------------
 
 run.RF.RFE <- function(trainData, subsets = c(2:30)){
