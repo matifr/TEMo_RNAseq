@@ -3,7 +3,7 @@
 ## Table of contents
 * [Background and motivation ](#Background-and-motivation )
 * [Project Aims ](#Project-Aims )
-* [How to run the scripts](#setup)
+* [How to run the analysis](#How-to-run-the-analysis)
 	* [Differential expression analysis](#Differential-expression-analysis)
 	* [Classification](#Classification)
 
@@ -19,7 +19,7 @@ The advent of high-throughput microarray technologies has resulted in an increas
 
 3. To validate the robustness of the diagnostic signature on independent patient cohorts as well as datasets of monocytes from different cancer types.
 
-### How to run the scripts
+### How to run the analysis
 
 #### Differential expression analysis
 To perform differential expression analysis run <code> TEMo_DEA.R </code>. This script loads the raw counts, performs *upperquantile* normalization, batch effect correction and differential expression using the *limma* package. It produces a PCA plot, and a heatmap of the top 100 most variable genes between conditions.
