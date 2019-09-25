@@ -1,9 +1,13 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Draw ROC curves on the training and testing datasets
-## Input: Trained model (trainModel), predictions on the testData set (testModel), class of the testData set (testDataClass)
-## Output: ROC curves plot of the model on the training and testing datasets
 ## Date: 5-10-2018
+## 
+## A functions to draw ROC curves on the training and testing sets
+## @param trainModel A model as returned by train() function from the caret package
+## @param testModel a dataframe with predictions on the testData set as returned by prediction() function from caret package
+## @param testDataClass a vector with class information for the test dataset
+## @return ROC plot on the training and testing datasets
+## 
 ##------------------------------------------
 
 plot.ROC <- function(trainModel, testModel, testDataClass, Title = "ROC Curve"){
