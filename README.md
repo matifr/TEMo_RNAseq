@@ -22,7 +22,9 @@ The advent of high-throughput microarray technologies has resulted in an increas
 ### How to run the scripts
 
 #### Differential expression analysis
-
-<code> nano </code>.
+To perform differentiale expression analysis run
+<code> 
+TEMo_DEA.R
+</code>.
 
 #### Classification
