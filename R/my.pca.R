@@ -1,9 +1,13 @@
 ##------------------------------------------
 ## Author: Matina Fragkogianni
-## Purpose of script: Principle component analysis plot for gene expressin data
-## Input: Normalized matrix of gene expression (mat), DGE object (dge), smaples colored by condition or batch (option)
-## Output: PCA plot
 ## Date: 28-9-2018
+##
+## A fuction to draw a principle component analysis plot for gene expressin data
+## @param mat a normalized matrix of gene expression
+## @param dge a DGE object 
+## @param option color samples condition or batch
+## @return draws a PCA plot
+## 
 ##------------------------------------------
 my.pca <- function(mat, dge, option = "condition"){
   
