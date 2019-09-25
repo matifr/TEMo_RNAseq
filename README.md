@@ -23,4 +23,6 @@ The advent of high-throughput microarray technologies has resulted in an increas
 
 #### Differential expression analysis
 
+` this is a code block`
+
 #### Classification
