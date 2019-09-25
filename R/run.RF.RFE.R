@@ -33,7 +33,7 @@ run.RF.RFE <- function(trainData, subsets = c(2:30)){
   rfe <- rfe(class ~.,
              data = trainData,
              sizes = subsets,
-             method="rf",
+             method = "rf",
              rfeControl = ctrl,
              trControl = trainctrl,
              preProc = c("center", "scale"))
