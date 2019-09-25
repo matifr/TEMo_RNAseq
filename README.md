@@ -4,7 +4,8 @@
 * [Background and motivation ](#Background-and-motivation )
 * [Project Aims ](#Project-Aims )
 * [How to run the scripts](#setup)
-	* [Differential expression analysis](#Differential-expression-analysiss)
+	* [Differential expression analysis](#Differential-expression-analysis)
+	* [Classification](#Classification)
 
 ### Background and motivation 
 
@@ -12,12 +13,14 @@ Breast and endometrial cancer are two of the most commonly diagnosed cancers in 
 The advent of high-throughput microarray technologies has resulted in an increased interest in identification of multigene signatures for diagnosis and prognosis of cancer.Monocytes are circulating blood cells that migrate to tissues and give rise to macrophages. Recent studies have revealed a pro-tumoral profile for these cells in renal carcinoma and colorectal cancer (Chittezhath et al. 2014; Hamm et al. 2015). Consequently, this study investigated the transcriptomes of circulating monocytes in breast and endometrial cancer in order to develop a blood-based, non-invasive diagnostic test for the detection of cancer. This test would act as a clinical tool for efficient screening of patients at risk. 
 
 ### Project Aims 
-a)	To compare the transcriptional profiles of circulating monocytes coming from breast and endometrial cancer patients to healthy individuals as well as between cancer types.
+1. To compare the transcriptional profiles of circulating monocytes coming from breast and endometrial cancer patients to healthy individuals as well as between cancer types.
 
-b)	To identify a diagnostic signature and develop a classification model for stratification of cancer patients.
+2. To identify a diagnostic signature and develop a classification model for stratification of cancer patients.
 
-c)	To validate the robustness of the diagnostic signature on independent patient cohorts as well as datasets of monocytes from different cancer types.
+3. To validate the robustness of the diagnostic signature on independent patient cohorts as well as datasets of monocytes from different cancer types.
 
 ### How to run the scripts
 
-#### Differential expression analysiss
+#### Differential expression analysis
+
+#### Classification
