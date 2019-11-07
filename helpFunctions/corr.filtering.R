@@ -23,7 +23,7 @@ corr.filtering <- function(trainData){
   tData <- as.matrix(tData)
   cT$class <- as.numeric(cT$class)
   cT <- as.matrix(cT$class)
-  reduced.tData <- filter.corr(features = tData, class = cT, mincorr = 0.4)
+  reduced.tData <- feseR::filter.corr(features = tData, class = cT, mincorr = 0.4)
   dim(reduced.tData)
   
   
