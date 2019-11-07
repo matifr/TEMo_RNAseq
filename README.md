@@ -42,4 +42,4 @@ Before model training and feature selection, the breast TEMo dataset of n = 77 s
 To perform differential expression analysis run <code> TEMo_DEA.R </code>. This script loads the raw counts, performs *upperquantile* normalization, batch effect correction and differential expression using the *limma* package. It produces a PCA plot, a heatmap of the top 100 most variable genes between conditions as well as a barplot with a selection of interesting genes.
 
 ### Classification
-To reproduce the classification analysis run <code> final_model.R </code>. The script performs the necessary normalization and data scaling and fits the a random forest model with recursive feature elimination using the *caret* package in R.  
+To reproduce the classification analysis run <code> final_model.R </code>. The script performs the necessary normalization and data scaling and fits the a random forest model with recursive feature elimination using the *caret* package in R. 
