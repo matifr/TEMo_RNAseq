@@ -22,7 +22,7 @@ The advent of high-throughput microarray technologies has resulted in an increas
 ### How to run the analysis
 
 #### Differential expression analysis
-To perform differential expression analysis run <code> TEMo_DEA.R </code>. This script loads the raw counts, performs *upperquantile* normalization, batch effect correction and differential expression using the *limma* package. It produces a PCA plot, and a heatmap of the top 100 most variable genes between conditions.
+To perform differential expression analysis run <code> TEMo_DEA.R </code>. This script loads the raw counts, performs *upperquantile* normalization, batch effect correction and differential expression using the *limma* package. It produces a PCA plot, a heatmap of the top 100 most variable genes between conditions as well as a barplot with a selection of interesting genes.
 
 #### Classification
 coming soon..
