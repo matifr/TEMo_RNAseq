@@ -12,7 +12,7 @@ Import.normalise.data <- function(){
   ##------------------------------------------
   # Source files
   ##------------------------------------------
-   source(file = "Functions/remove.dots.R")
+   source(file = "helpFunctions/remove.dots.R")
   
   ##------------------------------------------
   # Load libraries
@@ -29,7 +29,7 @@ Import.normalise.data <- function(){
   pData$Condition2 <- ifelse(pData$Condition == "Normal","Normal","Cancer")
   
   cat("Reading files in..")
-  d <- readDGE(pData$Filenames, path = "Counts/Batch 1_3_4_5_6/", columns = c(1,2), pData$Condition2)
+  d <- readDGE(pData$Filenames, path = "Counts/", columns = c(1,2), pData$Condition2)
   d$samples$batch = pData$Batch_info
   
   #### Filter lowly expressed genes and recalculate library size
