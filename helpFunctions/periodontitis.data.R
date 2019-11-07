@@ -18,7 +18,7 @@ periodontitis.data <- function(predictors){
   ##------------------------------------------
   # Source files
   ##------------------------------------------
-  source(file = "Functions/remove.dots.R")
+  source(file = "helpFunctions//remove.dots.R")
   
   #### Load the DGE object containing the periodontitis dataset
   load(file = "Data/periodontitis_dge_obj.Rdata")
@@ -32,7 +32,7 @@ periodontitis.data <- function(predictors){
   
   #### Create data frame for the data
   periodTestData <- t(nrmData)
-  periodTestDataClass <- periodSampleConditions
+  periodTestDataClass <- d$samples$group
   periodTestData <- data.frame(periodTestData, class = periodTestDataClass)
   
   return(periodTestData)
