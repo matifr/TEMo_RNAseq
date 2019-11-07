@@ -9,13 +9,10 @@
 ##------------------------------------------
 # Source files
 ##------------------------------------------
-source(file = "Classification_Analysis/tidy_code/random.class.perm.test.R")
+source(file = "helpFunctions//random.class.perm.test.R")
 
 #### Run permutation testing for the training data 
-random.classifiers <- random.class.perm.test(data_fr, rf.corr.rfe$optVariables, 1000)
-
-#### The "random.class.perm.test()" function takes sometime to run, you can uncomment this for the pre-run data
-#load("~/repos_not_updated/nature_paper_code/Monocytes_analysis_2018/Classification_Analysis/tidy_code/random.classifiers_1000_permutations.RData")
+random.classifiers <- random.class.perm.test(data_fr, rfCorrRFE$optVariables, 1000)
 
 #### get summary statistics for the accuracy of the random classifiers
 summary(random.classifiers$TrainAccuracy)

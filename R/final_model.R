@@ -12,6 +12,7 @@
 library(pROC)
 library(caret)
 library(dplyr)
+library(ROCR)
 
 ##------------------------------------------
 # Source files
@@ -72,24 +73,24 @@ reducedtData <- as.data.frame(reducedtData)
 reducedtData$class <- reducedtData.class$class
 
 #### Classification and feature selection using RFE-RF on the training set
-rfCorrRFE <- run.RF.RFE(trainData = reducedtData)
-confusionMatrix(RFCorrRFE,positive = "Cancer")
-ensembl.to.GS(RFCorrRFE$optVariables)
-plot(RFCorrRFE, type = c("g", "o"), xlim = c(0:31), ylim = c(0.7,1))
+rfCorrRFE <- run.RF.RFE(trainData = trainData)
+confusionMatrix(rfCorrRFE,positive = "Cancer")
+ensembl.to.GS(rfCorrRFE$optVariables)
+plot(rfCorrRFE, type = c("g", "o"), xlim = c(0:31), ylim = c(0.7,1))
 
 #### ROC curves of the features with the highest performance
-selectedIndices <- RFCorrRFE$pred$Variables == 17
-trainROC <- plot.roc(predictor = RFCorrRFE$pred$Cancer[selectedIndices],
-                    x = RFCorrRFE$pred$obs[selectedIndices], legacy.axes = TRUE)
+selectedIndices <- rfCorrRFE$pred$Variables == 17
+trainROC <- plot.roc(predictor = rfCorrRFE$pred$Cancer[selectedIndices],
+                    x = rfCorrRFE$pred$obs[selectedIndices], legacy.axes = TRUE)
 
-trainPred <- prediction(predictions = RFCorrRFE$pred$Normal[selectedIndices], labels = RFCorrRFE$pred$obs[selectedIndices], label.ordering = rev(levels(c("Cancer", "Normal"))))
+trainPred <- prediction(predictions = rfCorrRFE$pred$Normal[selectedIndices], labels = rfCorrRFE$pred$obs[selectedIndices], label.ordering = rev(levels(c("Cancer", "Normal"))))
 trainPerf <- performance(trainPred, "tpr", "fpr")
 plot(trainPerf, main = "Title", col = "#1B9E77",lwd = 2, cex.axis = 10)
-confusionMatrix(data = RFCorrRFE$pred$pred[selectedIndices],reference = RFCorrRFE$pred$obs[selectedIndices])
+confusionMatrix(data = rfCorrRFE$pred$pred[selectedIndices],reference = rfCorrRFE$pred$obs[selectedIndices])
 
 #### Model prediction and performance on the testData set
-p <- predict(RFCorrRFE, testData)
-p.prob =<- predict(RFCorrRFE, testData, type = "prob")
+p <- predict(rfCorrRFE, testData)
+p.prob <- predict(rfCorrRFE, testData, type = "prob")
 confusionMatrix(data = p$pred, reference = testData$class)
 testROC <- plot.roc(predictor = p.prob$Cancer,
                    x = testData$class, legacy.axes = TRUE)
@@ -99,13 +100,13 @@ testPerf <- performance(testPred, "tpr", "fpr")
 plot(testPerf, main="Title", col ="#7570B3",lwd=2, cex.axis=10)
 
 ### ROC curve plot of training and testing results of the model 
-plot.ROC(trainModel = RFCorrRFE, testModel = p, testDataClass = testData$class, Title = "ROC Curve - Random Forest")
+plot.ROC(trainModel = rfCorrRFE, testModel = p, testDataClass = testData$class, Title = "ROC Curve - Random Forest")
 
 #### Model testing on an independent cohort of isolated monocytes from Periodontitis
 # load the periodontitis dataset
-periodontitisTestData = periodontitis.data(predictors = RFCorrRFE$optVariables)
+periodontitisTestData = periodontitis.data(predictors = rfCorrRFE$optVariables)
 # predict using the trained model
-pr <- predict(object = RFCorrRFE, newdata = periodontitisTestData)
+pr <- predict(object = rfCorrRFE, newdata = periodontitisTestData)
 confusionMatrix(data = pr$pred, reference = periodontitisTestData$class)
 
 

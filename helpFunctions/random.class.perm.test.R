@@ -15,7 +15,7 @@ random.class.perm.test <- function(data_fr, variables, iter = 100) {
   ##------------------------------------------
   # Source files
   ##------------------------------------------
-  source(file = "Classification_Analysis/tidy_code/run.RF.R")
+  source(file = "helpFunctions/run.RF.R")
   
   TrainAccuracy <- c()
   TestAccuracy <- c()
