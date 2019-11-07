@@ -16,14 +16,14 @@ library(dplyr)
 ##------------------------------------------
 # Source files
 ##------------------------------------------
-source(file = "Classification_Analysis/tidy_code/import.normalise.data.R")
-source(file = "Classification_Analysis/tidy_code/run.ComBat.R")
-source(file = "Classification_Analysis/tidy_code/my.pca.R")
-source(file = "Classification_Analysis/tidy_code/corr.filtering.R")
-source(file = "Classification_Analysis/tidy_code/periodontitis.data.R")
-source(file = "Classification_Analysis/tidy_code/ensembl.to.GS.R")
-source(file = "Classification_Analysis/tidy_code/plot.ROC.R")
-source(file = "Classification_Analysis/tidy_code/run.RF.RFE.R")
+source(file = "helpFunctions/import.normalise.data.R")
+source(file = "helpFunctions/run.ComBat.R")
+source(file = "helpFunctions/my.pca.R")
+source(file = "helpFunctions/corr.filtering.R")
+source(file = "helpFunctions/periodontitis.data.R")
+source(file = "helpFunctions/ensembl.to.GS.R")
+source(file = "helpFunctions/plot.ROC.R")
+source(file = "helpFunctions/run.RF.RFE.R")
 
 ##------------------------------------------
 # Data import and model training and testing  
